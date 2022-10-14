@@ -30,7 +30,7 @@ Add-Content $FileName "Set-ItemProperty -Path 'HKCU:\Software\Policies\Google\Ch
 # Add-Content $FileName "Set WshShell = CreateObject(""WScript.Shell"")`nWshShell.Run ""powershell.exe -ExecutionPolicy Bypass -File $($FolderName)\set-ChromePolicies.ps1"", 0, False"
 
 # create scheduled task to run ps file every hour cmd /c start /min "" powershell -WindowStyle Hidden -ExecutionPolicy Bypass -File $($FolderName)\set-ChromePolicies.ps1
-$taskAction = New-ScheduledTaskAction -Execute "cmd" -Argument "/c start /min """" powershell -ExecutionPolicy Bypass -WindowStyle Hidden -noProfile -noInteractive -File $($FolderName)\set-ChromePolicies.ps1"
+$taskAction = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-ExecutionPolicy Bypass -WindowStyle Hidden -noProfile -noInteractive -File $($FolderName)\set-ChromePolicies.ps1"
 $taskTrigger = New-ScheduledTaskTrigger -AtLogOn
 $taskTrigger2 = New-ScheduledTaskTrigger -Daily -At 12am
 $settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -StartWhenAvailable
