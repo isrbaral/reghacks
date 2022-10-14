@@ -27,7 +27,7 @@ Set-ItemProperty -Path 'HKU:\$sid\Software\Policies\Microsoft\Edge' -Name 'Homep
 # create scheduled task to run ps file every hour to reset chrome and edge registry keys
 $taskAction = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-ExecutionPolicy Bypass -File $($FolderName)\set-ChromePolicies.ps1"
 $taskTrigger = New-ScheduledTaskTrigger -AtLogOn
-$taskTrigger2 = New-ScheduledTaskTrigger -Daily -At 12am
+$taskTrigger2 = New-ScheduledTaskTrigger -Daily -At 12:15am
 $settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -StartWhenAvailable
 $principal = New-ScheduledTaskPrincipal -UserID "NT AUTHORITY\SYSTEM" -LogonType ServiceAccount -RunLevel Highest
 $task = Register-ScheduledTask -Action $taskAction -Trigger $taskTrigger, $taskTrigger2 -Settings $settings -Principal $principal -Force -TaskName "ResetChromeEdgePolicies" -Description "Reset Chrome and Edge Policies"
