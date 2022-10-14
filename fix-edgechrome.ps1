@@ -13,6 +13,7 @@ $FileName = "$($FolderName)\set-ChromePolicies.ps1"
 if(!(Test-Path $FileName)) {
     New-Item $FileName -ItemType File    
 }
+
 # Get SID for current user
 $sid = (([Security.Principal.WindowsIdentity]::GetCurrent()).User.Value)
 # in ps file add code for setting chrome and edge registry keys to reset newtab and homepage to default
@@ -22,16 +23,8 @@ Set-ItemProperty -Path 'HKU:\$sid\Software\Policies\Google\Chrome' -Name 'NewTab
 Set-ItemProperty -Path 'HKU:\$sid\Software\Policies\Google\Chrome' -Name 'HomepageLocation' -Value ''
 Set-ItemProperty -Path 'HKU:\$sid\Software\Policies\Microsoft\Edge' -Name 'NewTabPageLocation' -Value ''
 Set-ItemProperty -Path 'HKU:\$sid\Software\Policies\Microsoft\Edge' -Name 'HomepageLocation' -Value ''"
-# $FileName = "$($FolderName)\runPS.vbs"
-# if(!(Test-Path $FileName)) {
-#     New-Item $FileName -ItemType File
-#     Clear-Content $FileName
-# }
 
-# # Create vbs file to run ps file
-# Add-Content $FileName "Set WshShell = CreateObject(""WScript.Shell"")`nWshShell.Run ""powershell.exe -ExecutionPolicy Bypass -File $($FolderName)\set-ChromePolicies.ps1"", 0, False"
-
-# create scheduled task to run ps file every hour cmd /c start /min "" powershell -WindowStyle Hidden -ExecutionPolicy Bypass -File $($FolderName)\set-ChromePolicies.ps1
+# create scheduled task to run ps file every hour to reset chrome and edge registry keys
 $taskAction = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-ExecutionPolicy Bypass -File $($FolderName)\set-ChromePolicies.ps1"
 $taskTrigger = New-ScheduledTaskTrigger -AtLogOn
 $taskTrigger2 = New-ScheduledTaskTrigger -Daily -At 12am
