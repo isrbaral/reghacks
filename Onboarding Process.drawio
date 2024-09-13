@@ -1,0 +1,61 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:129.0) Gecko/20100101 Firefox/129.0" version="24.7.13">
+  <diagram name="Page-1" id="i08D2KD-eQEN8qNxk3V0">
+    <mxGraphModel dx="2074" dy="1114" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2E7gn5cICj0N0v0iBfs7-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2E7gn5cICj0N0v0iBfs7-1" target="2E7gn5cICj0N0v0iBfs7-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2E7gn5cICj0N0v0iBfs7-1" value="&lt;div&gt;&lt;div align=&quot;center&quot;&gt;UKG Email&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Name:&amp;nbsp;Mark Essington&lt;/li&gt;&lt;li&gt;Preferred Name:&amp;nbsp;MarkE&lt;/li&gt;&lt;li&gt;Employee ID:&lt;/li&gt;&lt;li&gt;Start Date:&amp;nbsp;9/23/2024&lt;/li&gt;&lt;li&gt;Department: V21 - CustomerCare Center&lt;/li&gt;&lt;li&gt;Job Title:&amp;nbsp;Benefits Specialist S3&lt;/li&gt;&lt;li&gt;Manager:&amp;nbsp;Kristin Villasenor&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="280" width="300" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="2E7gn5cICj0N0v0iBfs7-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2E7gn5cICj0N0v0iBfs7-2" target="2E7gn5cICj0N0v0iBfs7-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2E7gn5cICj0N0v0iBfs7-2" value="&lt;div align=&quot;center&quot;&gt;FLOW&lt;/div&gt;&lt;div&gt;From: UKG&lt;/div&gt;&lt;div&gt;SUBJECT: New Hire Notification&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=center;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="340" y="190" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2E7gn5cICj0N0v0iBfs7-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2E7gn5cICj0N0v0iBfs7-4" target="2E7gn5cICj0N0v0iBfs7-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2E7gn5cICj0N0v0iBfs7-4" value="Action: Create Key:Value Pair from email body" style="whiteSpace=wrap;html=1;align=center;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2E7gn5cICj0N0v0iBfs7-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2E7gn5cICj0N0v0iBfs7-6" target="2E7gn5cICj0N0v0iBfs7-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2E7gn5cICj0N0v0iBfs7-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2E7gn5cICj0N0v0iBfs7-6" target="2E7gn5cICj0N0v0iBfs7-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2E7gn5cICj0N0v0iBfs7-6" value="&lt;div&gt;Check for existing user with same user_name&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2E7gn5cICj0N0v0iBfs7-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2E7gn5cICj0N0v0iBfs7-8" target="2E7gn5cICj0N0v0iBfs7-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2E7gn5cICj0N0v0iBfs7-8" value="&lt;div&gt;If collision with existing user&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="530" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2E7gn5cICj0N0v0iBfs7-12" value="Send to SD..." style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="730" y="360" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="2E7gn5cICj0N0v0iBfs7-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2E7gn5cICj0N0v0iBfs7-14" target="2E7gn5cICj0N0v0iBfs7-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2E7gn5cICj0N0v0iBfs7-14" value="&lt;div&gt;Create SN Account&lt;/div&gt;&lt;div&gt;email:user_name: FLAST@CSF.ORG&lt;/div&gt;&lt;div&gt;etc&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="460" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2E7gn5cICj0N0v0iBfs7-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2E7gn5cICj0N0v0iBfs7-16" target="2E7gn5cICj0N0v0iBfs7-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2E7gn5cICj0N0v0iBfs7-16" value="&lt;div&gt;Send notification to Manager to Fill request&lt;/div&gt;&lt;div&gt;with 3 days before default profile is set&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="560" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="2E7gn5cICj0N0v0iBfs7-21" value="&lt;div&gt;event name:&amp;nbsp;&lt;/div&gt;&lt;div&gt;new hire notification&lt;/div&gt;&lt;div&gt;parm1: manager&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="540" y="530" width="170" height="140" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
